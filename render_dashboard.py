@@ -116,8 +116,8 @@ footer{{margin:10px 28px 30px;color:#8b94a3;font-size:12px;border-top:1px solid 
 .note{{margin:0 28px;color:#8b94a3;font-size:12px;max-width:900px}}
 </style></head><body>
 <header><h1>Panta Market Intelligence</h1>
-<div class=sub>Read-only dashboard over the live Panta prediction-market catalog &middot;
-snapshot {pulled} UTC &middot; rendered {when}</div></header>
+<div class=sub>Read-only dashboard over the Panta prediction-market catalog &middot;
+point-in-time snapshot {pulled} UTC (not a live feed) &middot; rendered {when}</div></header>
 <div class=stats>
 <div class=stat><div class=n>{live}</div><div class=l>live markets</div></div>
 <div class=stat><div class=n>{titled}</div><div class=l>titled (intel-grade)</div></div>
