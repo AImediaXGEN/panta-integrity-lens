@@ -1,0 +1,15 @@
+# Python / data / OS — keep the public repo clean. Secrets live OUTSIDE the
+# repo (~/.panta_apikey_live, ~/.panta_auth.json) and must never be committed.
+__pycache__/
+*.pyc
+*.pyo
+
+# Hourly snapshot history is bulky (~320 KB each). Keep the sample that ships
+# with the repo; the pipeline regenerates the rest.
+data/snapshot-2*.json
+!data/snapshot-latest.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
