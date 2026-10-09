@@ -47,6 +47,8 @@ Failure, 2026-10-06 ~22:27 CDT).
 - `tests/test_signals.py` — 27 unit tests pinning every signal rule and its
   threshold (pure synthetic fixtures, fixed clock; run with
   `python3 -m unittest discover -s tests`).
+- `METHODOLOGY.md` — the seven integrity signals documented for independent
+  review: purpose, exact rule, threshold, and test reference per signal.
 - `render_dashboard.py` — renders `dashboard.html` from the latest snapshot.
   Fully static, self-contained HTML: no build step, no framework — just open it
   in a browser.
