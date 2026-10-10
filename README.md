@@ -4,6 +4,11 @@ Read-only market-intelligence dashboard on live Panta prediction markets.
 Pivot from the blocked Solami build (XR-007 = Blocked — Sponsor Data Access
 Failure, 2026-10-06 ~22:27 CDT).
 
+**Links:** [Live dashboard](https://aimediaxgen.github.io/panta-integrity-lens/) ·
+[Pitch video](https://www.youtube.com/watch?v=ZlIi8W_Elyk) ·
+[Demo video](https://www.youtube.com/watch?v=e4TmhvFEms8) ·
+[METHODOLOGY.md](METHODOLOGY.md) (7 signals, 27 tests)
+
 ## Verified state (2026-10-06 ~22:35 CDT)
 
 - **Panta API $0-clean**: free email registration, no card, no wallet. Account
@@ -57,7 +62,7 @@ Failure, 2026-10-06 ~22:27 CDT).
 ## Run
 
 ```bash
-cd panta-dashboard
+cd panta-integrity-lens
 python3 snapshot.py          # pull live catalog -> data/snapshot-<UTC>.json (read-only)
 python3 render_dashboard.py  # -> dashboard.html
 ```
@@ -65,10 +70,23 @@ python3 render_dashboard.py  # -> dashboard.html
 Open `dashboard.html` in a browser. Requirements: Python 3 stdlib only, `curl`
 binary. Network: read-only GETs to `live-api.panta.market` (plus login on 401).
 
-## What remains
+## Delivered (2026-10-09)
 
-Demo video (2–3 min), repo push to a public GitHub repo, Colosseum registration
-+ submission (human gate), Earn sidetrack submission (human gate).
+- Demo video (1:01) and pitch video (1:53) recorded and uploaded (links above)
+- Public GitHub repo (this repo, MIT)
+- Colosseum Crypto World's Fair submission: Panta Integrity Lens (Oct 9)
+- Panta Earn sidetrack submission (Oct 9)
+
+## Reproducing the grades
+
+`data/snapshot-latest.json` is the exact Panta API snapshot behind the
+deployed dashboard (pulled 20261010-041303 UTC, 97 markets, 0 detail errors).
+Grades are deterministic from snapshot + `signals.py`:
+
+```bash
+python3 -m pytest tests/   # 27 signal unit tests
+python3 render_dashboard.py # rebuild dashboard.html from data/snapshot-latest.json
+```
 
 ## Competition note
 
