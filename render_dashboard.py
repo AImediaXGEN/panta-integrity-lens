@@ -113,6 +113,7 @@ td.t{{max-width:340px}} td.vol{{text-align:right;white-space:nowrap}} td.src{{co
 .b-flow{{background:#123f45;color:#7adbe2}} .b-thin{{background:#2a2f38;color:#9aa4b2}}
 .empty{{color:#8b94a3;text-align:center;padding:20px}}
 footer{{margin:10px 28px 30px;color:#8b94a3;font-size:12px;border-top:1px solid #232a35;padding-top:14px}}
+footer a{{color:#8b94a3}}
 .note{{margin:0 28px;color:#8b94a3;font-size:12px;max-width:900px}}
 </style></head><body>
 <header><h1>Panta Market Intelligence</h1>
@@ -142,7 +143,15 @@ final outcome (1 = YES won, 0 = NO won). Signals compare live prices against the
 uninformed 50/50 prior and against primary-curve vs secondary-market venues — all
 derived from this snapshot, nothing external.</p>
 <footer>Powered by Panta &middot; read-only: this dashboard never creates markets,
-trades, or touches a wallet &middot; not financial advice.</footer>
+trades, or touches a wallet &middot; not financial advice.<br>
+<a href="https://github.com/AImediaXGEN/panta-integrity-lens">GitHub repo</a> &middot;
+<a href="https://github.com/AImediaXGEN/panta-integrity-lens/blob/main/METHODOLOGY.md">Methodology (7 signals)</a> &middot;
+<a href="https://www.youtube.com/watch?v=ZlIi8W_Elyk">Pitch video</a> &middot;
+<a href="https://www.youtube.com/watch?v=e4TmhvFEms8">Demo video</a> &middot;
+<a href="https://docs.panta.market/">Panta API docs</a></footer>
+<p class=note>How to read this: <b>observed</b> = values taken directly from the Panta API
+(title, prices, volume, phase); <b>derived</b> = integrity signals computed from this
+snapshot only (see METHODOLOGY.md) — no external data, no outcome predictions.</p>
 </body></html>""".format(
         pulled=pulled, when=when,
         live=summary["live"], titled=summary["titled"],
