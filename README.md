@@ -84,7 +84,7 @@ deployed dashboard (pulled 20261010-041303 UTC, 97 markets, 0 detail errors).
 Grades are deterministic from snapshot + `signals.py`:
 
 ```bash
-python3 -m pytest tests/   # 27 signal unit tests
+python3 -m unittest discover -s tests  # 27 signal unit tests (stdlib only, no dependencies)
 python3 render_dashboard.py # rebuild dashboard.html from data/snapshot-latest.json
 ```
 
