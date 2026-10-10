@@ -98,7 +98,9 @@ h1{{margin:0 0 6px;font-size:22px}} h2{{margin:26px 28px 8px;font-size:16px}}
 .stats{{display:flex;gap:12px;flex-wrap:wrap;margin:14px 28px 0}}
 .stat{{background:#161c25;border:1px solid #232a35;border-radius:8px;padding:10px 14px;min-width:120px}}
 .stat .n{{font-size:20px;font-weight:700}} .stat .l{{font-size:11px;color:#8b94a3}}
-table{{width:calc(100% - 56px);margin:8px 28px 20px;border-collapse:collapse;font-size:13px}}
+table{{width:100%;margin:0;border-collapse:collapse;font-size:13px;min-width:640px}}
+.tbl{{overflow-x:auto;margin:8px 28px 20px}}
+@media (max-width:700px){{header{{padding:18px 16px}}h1{{font-size:20px}}h2{{margin:22px 16px 8px}}.stats{{margin:12px 16px 0;gap:8px}}.note{{margin:0 16px}}footer{{margin:10px 16px 24px}}.tbl{{margin:8px 0 16px 16px}}}}
 th{{text-align:left;color:#8b94a3;font-weight:600;padding:8px;border-bottom:1px solid #232a35}}
 td{{padding:8px;border-bottom:1px solid #1a2029;vertical-align:top}}
 tr:hover td{{background:#131922}}
@@ -129,13 +131,13 @@ point-in-time snapshot {pulled} UTC (not a live feed) &middot; rendered {when}</
 <div class=stat><div class=n>{mis}</div><div class=l>venue mismatches</div></div>
 </div>
 <h2>Live markets</h2>
-<table><tr><th>Market</th><th>Category</th><th>Phase</th><th>YES price</th>
+<div class=tbl><table><tr><th>Market</th><th>Category</th><th>Phase</th><th>YES price</th>
 <th style="text-align:right">Volume</th><th>Price src</th><th>Signals</th></tr>
-{rows_live}</table>
+{rows_live}</table></div>
 <h2>Recently resolved (top 25 by volume)</h2>
-<table><tr><th>Market</th><th>Category</th><th>Phase</th><th>YES price</th>
+<div class=tbl><table><tr><th>Market</th><th>Category</th><th>Phase</th><th>YES price</th>
 <th style="text-align:right">Volume</th><th>Price src</th><th>Signals</th></tr>
-{rows_res}</table>
+{rows_res}</table></div>
 <p class=note>Data-quality note: {ph} of {total} catalog rows are untitled
 placeholder shells and are excluded from the intelligence tables above. Prices are
 spot prices from the Panta API (priceSource shown per market); resolved markets show
